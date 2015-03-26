@@ -9,10 +9,11 @@
 	while($row = mysqli_fetch_assoc($result))
   {
     extract($row);
-    echo "$vin, $make, $model, $year, $current_status, $last_odometer_reading, $last_maint_odometer, $location_address<br />";
+    echo "$vin,  $make,  $model,  $year,  $current_status,  $last_odometer_reading,  $last_maint_odometer,  $location_address<br />";
   }
   
-	$result->close();
-	$conn->close();
-
+  $result->close();
+  $conn->close();
+  
+ <a href="administratorLinks.html">Return</a> 
 ?>
