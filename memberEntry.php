@@ -38,10 +38,12 @@
            extract($row);
            echo "Your member number is $member_number<br />";
         }
+        
 
   mysqli_close($dbc);
 
 
 ?>
+<a href="index.html">KTCS Home</a>
 </body>
 </html>
