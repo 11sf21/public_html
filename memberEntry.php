@@ -19,7 +19,6 @@
   $creditcardnumber = $_POST['creditcardnumber'];
   $creditcardexpiry = $_POST['creditcardexpiry'];
   $date = date("Y-m-d");
-  echo $date;
 
   $dbc = mysqli_connect($hn, $un, $pw, $db)
     or die('Error connecting to MySQL server.');
@@ -37,14 +36,12 @@
 	while($row = mysqli_fetch_assoc($result))
       	{
            extract($row);
-           echo "$member_number<br />";
+           echo "Your member number is $member_number<br />";
         }
 
   mysqli_close($dbc);
 
 
 ?>
-<meta http-equiv="refresh" content="3;url=index.html" />
-
 </body>
 </html>
