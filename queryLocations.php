@@ -12,7 +12,7 @@
         extract($row);
         echo "$location_address<br>";
 	$test = "$location_address.html";
-        echo '<a href="' . $location_address. '".html">' . $location_address . '</a>';
+        echo '<a href="' . $test. '">' . $location_address . '</a>';
 
       }
   
