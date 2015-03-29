@@ -4,7 +4,7 @@
 	  $conn = new mysqli($hn, $un, $pw, $db);
 	  if ($conn->connect_error) die($conn->connect_error);
 	
-	  $result = mysqli_query($conn, "SELECT * FROM car WHERE location_address = 'Lot 1'")
+	  $result = mysqli_query($conn, "SELECT * FROM car WHERE location_address = Lot 1")
       or die ("Couldn't execute query.");
            
 	  while($row = mysqli_fetch_assoc($result))
