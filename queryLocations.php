@@ -10,9 +10,10 @@
 	    while($row = mysqli_fetch_assoc($result))
       {
         extract($row);
-        echo <<<_END
-        <a href="$location_address.html">$location_address</a>
-        _END;
+        echo "$location_address<br>";
+        //echo <<<_END
+        //<a href="$location_address.html">$location_address</a>
+        //_END;
       }
   
       $result->close();
