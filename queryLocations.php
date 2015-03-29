@@ -10,7 +10,7 @@
 	    while($row = mysqli_fetch_assoc($result))
       {
         extract($row);
-        echo "$location_address<br>";
+        //echo "$location_address<br>";
 	$test = "$location_address.php";
         echo '<a href="' . $test. '">' . $location_address . '</a>';
 
