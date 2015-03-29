@@ -11,8 +11,8 @@
       {
         extract($row);
         echo "$location_address<br>";
-	
-        echo '<a href="' . $location_address. '".html">' . $location_address . '</a>'
+	$test = "$location_address.html";
+        echo '<a href="' . $location_address. '".html">' . $location_address . '</a>';
 
       }
   
