@@ -30,7 +30,7 @@
         extract($row);
         //echo "$location_address<br>";
 	      $lot = "$location_address.php";
-        echo '<a href="' . $lot. '">' . $location_address . '</a><br>';
+        echo '<h2><a href="' . $lot. '">' . $location_address . '</a></h2><br>';
 
       }
   
