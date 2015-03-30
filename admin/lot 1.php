@@ -19,19 +19,7 @@
         </ul>
       </div>
     </div>
-    <thead><tr>
-    <th>vin
-    </th><th>make
-    </th><th>model
-    </th><th>year
-    </th><th>current_status
-    </th><th>last_odometer_reading
-    </th><th>last_gas_tank_reading
-    </th><th>last_maint_date
-    </th><th>last_maint_odometer
-    </th><th>location_address
-    </th></tr>
-    </thead>
+
 <?php
   require_once 'login.php';
 	$conn = new mysqli($hn, $un, $pw, $db);
