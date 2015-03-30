@@ -19,7 +19,19 @@
         </ul>
       </div>
     </div>
-
+    <thead><tr>
+    <th>vin
+    </th><th>make
+    </th><th>model
+    </th><th>year
+    </th><th>current_status
+    </th><th>last_odometer_reading
+    </th><th>last_gas_tank_reading
+    </th><th>last_maint_date
+    </th><th>last_maint_odometer
+    </th><th>location_address
+    </th></tr>
+    </thead>
 <?php
   require_once 'login.php';
 	$conn = new mysqli($hn, $un, $pw, $db);
@@ -33,7 +45,7 @@
     extract($row);
     $test = "$location_address.php"; 
     echo '<a href="' . $test. '">' . $location_address . '</a><br>'; 
-
+   
     echo "$vin,  $make,  $model,  $year,  $current_status,  $last_odometer_reading,  $last_maint_odometer,  $location_address<br />";
   }
   
@@ -41,5 +53,6 @@
   $conn->close();
 ?>
 
-  <a href="administratorLinks.html">Return</a> 
+    <a href="administratorLinks.html">Return</a> 
+  </body>
 </html>
