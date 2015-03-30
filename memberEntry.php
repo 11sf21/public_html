@@ -36,6 +36,7 @@
 	while($row = mysqli_fetch_assoc($result))
       	{
            extract($row);
+           echo "Successfully added new member!"
            echo "Your member number is $member_number<br />";
         }
         
