@@ -52,9 +52,9 @@
         echo '<td style="padding:5px;border-left:1px solid black;">'.$current_status.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$last_odometer_reading.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$last_maint_odometer.'</td>';
-        echo '<td style="padding:5px;border-left:1px solid black;">'.$location_address.'</td></tr>';
+        echo '<td style="padding:5px;border-left:1px solid black;">'.$location_address.'</td>';
         echo '<form method="post" action="displayCarRentalHistory.php">';
-        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$vin.'" name="vin">View Cars</button></td>';
+        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$vin.'" name="vin">View Rental History</button></td></tr>';
         echo '</form>';
       }
   

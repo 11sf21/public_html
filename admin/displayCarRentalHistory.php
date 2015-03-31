@@ -60,7 +60,7 @@
         echo '<td style="padding:5px;border-left:1px solid black;">'.$hours_used.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$return_date.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$return_time.'</td>';
-                echo '<td style="padding:5px;border-left:1px solid black;">'.$make.'</td>';
+        echo '<td style="padding:5px;border-left:1px solid black;">'.$make.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$model.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$year.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$current_status.'</td>';
