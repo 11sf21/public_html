@@ -35,8 +35,12 @@
       require_once 'login.php';
 	    $conn = new mysqli($hn, $un, $pw, $db);
 	    if ($conn->connect_error) die($conn->connect_error);
+
 	    $query = "SELECT vin, make, model, year, reservation_number, pick_up_time, hours_used " .
       "FROM car NATURAL LEFT OUTER JOIN reservations WHERE location_address = '$loc_address'")
+      or die ("Couldn't execute query.");
+
+      $result = mysqli_query($conn, $query)
       or die ("Couldn't execute query.");
            
 	    while($row = mysqli_fetch_assoc($result))

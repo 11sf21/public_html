@@ -70,7 +70,7 @@
         </div>
         <?php
           $location_address = $_POST['address'];
-          echo '<input type="text" name="location_address" value="'.$location_address.'">'; 
+          echo '<input type="hidden" name="location_address" value="'.$location_address.'">'; 
         ?>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
