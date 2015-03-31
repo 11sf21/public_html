@@ -42,7 +42,7 @@
       $last_maint_odom = $_POST['last_maint_odom'];
       $location_address = $_POST['location_address'];
 
-      current_status
+      
       echo $vin;
       echo $make;
       echo $model;
