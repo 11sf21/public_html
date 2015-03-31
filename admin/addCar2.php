@@ -55,8 +55,11 @@
       $conn = new mysqli($hn, $un, $pw, $db);
       if ($conn->connect_error) die($conn->connect_error);
 
-      $query = "INSERT INTO car (vin, make, model, year, current_status, last_odometer_reading, last_gas_tank_reading, last_maint_date, last_maint_odometer, location_address) VALUES ('$vin', '$make', '$model', '$year', \'Available\', '$last_odom', \'full tank\', '$last_maint_date', '$last_maint_odom', '$location_address');";
   
+      $query = "INSERT INTO car (vin, make, model, year, current_status, last_odometer_reading, last_gas_tank_reading, " .
+      "last_maint_date, last_maint_odometer, location_address) " .
+      "VALUES ('$vin', '$make', '$model', '$year', \'Available\', '$last_odom', \'full tank\', '$last_maint_date', '$last_maint_odom', '$location_address')";
+      
       $result = mysqli_query($conn, $query)
       or die ("Couldn't execute insertion.");
       $result = mysqli_query($conn, "SELECT * FROM car WHERE location_address = '$location_address'")
