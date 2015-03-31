@@ -40,6 +40,8 @@
   
       $result = mysqli_query($conn, "UPDATE reservations SET return_date = '$date', return_time = '$time' WHERE reservation_number = '$reservation_number'")
       or die ("Couldn't execute query.");
+      $result = mysqli_query($conn, "SELECT * FROM reservations WHERE reservation_number = '$reservation_number'")
+      or die ("Couldn't execute query.");
            
       while($row = mysqli_fetch_assoc($result))
       {
