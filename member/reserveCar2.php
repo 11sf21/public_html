@@ -37,6 +37,12 @@
       $hours = $_POST['hours'];
       $vin = $_POST['vin'];
       $location_address = $_POST['location_address'];
+      echo $member_number;
+      echo $date;
+      echo $time;
+      echo $hours;
+      echo $vin;
+      echo $location_address;
 
       require_once 'login.php';
       $conn = new mysqli($hn, $un, $pw, $db);
