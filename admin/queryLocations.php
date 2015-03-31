@@ -20,9 +20,10 @@
 
     <table style="border-collapse:collapse;border:1px solid black;">
     <th style="padding:5px;border-top:1px solid black;">Address</th>
+    <th style="padding:5px;border-top:1px solid black;"></th>
 
     <?php
-    require_once 'login.php';
+      require_once 'login.php';
       $conn = new mysqli($hn, $un, $pw, $db);
 	    if ($conn->connect_error) die($conn->connect_error);
 	
@@ -44,5 +45,7 @@
   
       $result->close();
       $conn->close();
-  ?>
+    ?>
+    </table>
+  </body>
 </html>
