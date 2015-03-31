@@ -15,7 +15,7 @@
         <ul class="pull-right">
           <li><a href="../memberEntry.html">Display Car Rental History</a></li>
           <li><a href="../member/memberLinks.html">Add Car to Location</a></li>
-          // <li><a href="administratorLinks.html">Administrator</a></li>
+          <li><a href="administratorLinks.html">Administrator</a></li>
         </ul>
       </div>
     </div>
