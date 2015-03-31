@@ -27,7 +27,7 @@
     <div class="container">
       <form class="form-horizontal" role="form" method="post" action="reserveCar2.php">
         <div class="form-group">
-          <label class="control-label col-sm-2" for="member_number">Reservation Number:</label>
+          <label class="control-label col-sm-2" for="member_number">Member Number:</label>
           <div class="col-sm-10">
               <input type="text" class="form-control" name="member_number" placeholder="Enter your member number" />
           </div>
