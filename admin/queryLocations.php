@@ -21,6 +21,7 @@
     <table style="border-collapse:collapse;border:1px solid black;">
     <th style="padding:5px;border-top:1px solid black;">Address</th>
     <th style="padding:5px;border-top:1px solid black;"></th>
+    <th style="padding:5px;border-top:1px solid black;"></th>
 
     <?php
       require_once 'login.php';
