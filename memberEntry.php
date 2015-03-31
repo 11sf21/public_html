@@ -47,8 +47,9 @@
 	   while($row = mysqli_fetch_assoc($result))
       {
         extract($row);
-        echo "Successfully added new member!";
+        echo "Successfully added new member! <br>";
         echo "Your member number is $member_number<br />";
+        echo "Your username is member and your password is member <br>";
       }
 
       mysqli_close($dbc);
