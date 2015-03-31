@@ -15,7 +15,7 @@
         <ul class="pull-right">
           <li><a href="../memberEntry.html">Register</a></li>
           <li><a href="./memberLinks.html">Member</a></li>
-          // <li><a href="../admin/administratorLinks.html">Administrator</a></li>
+          <li><a href="../admin/administratorLinks.html">Administrator</a></li>
         </ul>
       </div>
     </div>
@@ -61,7 +61,6 @@
         echo '<td style="padding:5px;border-left:1px solid black;">'.$last_maint_odometer.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$location_address.'</td>';
         echo '<form method="post" action="reserveCar.php">';
-        //echo '  <input type="hidden" name="location_address" value="'.$location_address.'">';
         echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$vin.'" name="vin">Reserve Car</button></td>';
         echo '</form>';
 
