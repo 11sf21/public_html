@@ -25,19 +25,18 @@
     <th style="padding:5px;border-left:1px solid black;">Make</th>
     <th style="padding:5px;border-left:1px solid black;">Model</th>
     <th style="padding:5px;border-left:1px solid black;">Year</th>
-    <th style="padding:5px;border-left:1px solid black;">Current status</th>
-    <th style="padding:5px;border-left:1px solid black;">Last Odometer</th>
-    <th style="padding:5px;border-left:1px solid black;">Last Maint Odometer</th>
-    <th style="padding:5px;border-left:1px solid black;">Location Address</th>
-    <th style="padding:5px;border-left:1px solid black;"></th>
+    <th style="padding:5px;border-top:1px solid black;">Reservation number</th>
+    <th style="padding:5px;border-left:1px solid black;">Pick up time</th>
+    <th style="padding:5px;border-left:1px solid black;">Hours used</th>
+    
 
     <?php
       $loc_address = $_POST["address"];
       require_once 'login.php';
 	    $conn = new mysqli($hn, $un, $pw, $db);
 	    if ($conn->connect_error) die($conn->connect_error);
-	
-	    $result = mysqli_query($conn, "SELECT * FROM car WHERE location_address = '$loc_address'")
+	    $query = "SELECT vin, make, model, year, reservation_number, pick_up_time, hours_used " .
+      "FROM car NATURAL LEFT OUTER JOIN reservations WHERE location_address = '$loc_address'")
       or die ("Couldn't execute query.");
            
 	    while($row = mysqli_fetch_assoc($result))
@@ -50,13 +49,9 @@
         echo '<td style="padding:5px;border-left:1px solid black;">'.$make.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$model.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$year.'</td>';
-        echo '<td style="padding:5px;border-left:1px solid black;">'.$current_status.'</td>';
-        echo '<td style="padding:5px;border-left:1px solid black;">'.$last_odometer_reading.'</td>';
-        echo '<td style="padding:5px;border-left:1px solid black;">'.$last_maint_odometer.'</td>';
-        echo '<td style="padding:5px;border-left:1px solid black;">'.$location_address.'</td>';
-        echo '<form method="post" action="displayCarRentalHistory.php">';
-        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$vin.'" name="vin">View Rental History</button></td></tr>';
-        echo '</form>';
+        echo '<td style="padding:5px;border-left:1px solid black;">'.$reservation_number.'</td>';
+        echo '<td style="padding:5px;border-left:1px solid black;">'.$pick_up_time.'</td>';
+        echo '<td style="padding:5px;border-left:1px solid black;">'.$hours_used.'</td></tr>';
       }
   
       $result->close();

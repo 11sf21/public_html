@@ -22,6 +22,7 @@
     <th style="padding:5px;border-top:1px solid black;">Address</th>
     <th style="padding:5px;border-top:1px solid black;"></th>
     <th style="padding:5px;border-top:1px solid black;"></th>
+    <th style="padding:5px;border-top:1px solid black;"></th>
 
     <?php
       require_once 'login.php';
@@ -39,7 +40,10 @@
         //echo '<h2><a href="' . $lot. '">' . $location_address . '</a></h2><br>';
         echo '<tr style="border-top:1px solid black;"><td style="padding:5px;">'.$location_address.'</td>';
         echo '<form method="post" action="lotCars.php">';
-        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$location_address.'" name="address">View Cars</button></td>';
+        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$location_address.'" name="address">View Full Info Cars</button></td>';
+        echo '</form>';
+        echo '<form method="post" action="carsWithReserveInfo.php">';
+        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$location_address.'" name="address">View Cars and Res Info</button></td>';
         echo '</form>';
         echo '<form method="post" action="addCar.php">';
         echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$location_address.'" name="address">Add Car</button></td></tr>';
