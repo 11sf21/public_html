@@ -12,7 +12,7 @@
 
 
 .jumbotron {
-  background-image:url('2014.jpg');
+  background-image:url('/home/steve/public_html/2014.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
