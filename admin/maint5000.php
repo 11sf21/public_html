@@ -13,7 +13,7 @@
         <ul class="pull-right">
           <li><a href="../memberEntry.html">Register</a></li>
           <li><a href="../member/memberLinks.html">Member</a></li>
-          <li><a href="administratorLinks.html">Administrator</a></li>
+          <li><a href="./administratorLinks.html">Administrator</a></li>
         </ul>
       </div>
     </div>
