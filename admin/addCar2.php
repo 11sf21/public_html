@@ -41,14 +41,14 @@
       $last_maint_date = $_POST['last_maint_date'];
       $last_maint_odom = $_POST['last_maint_odom'];
       $location_address = $_POST['location_address'];
-      echo $vin<br>;
-      echo $make<br>;
-      echo $model<br>;
-      echo $year<br>;
-      echo $last_odom<br>;
-      echo $last_maint_date<br>;
-      echo $last_maint_odom<br>;
-      echo $location_address<br>;
+      echo $vin;
+      echo $make;
+      echo $model;
+      echo $year;
+      echo $last_odom;
+      echo $last_maint_date;
+      echo $last_maint_odom;
+      echo $location_address;
       
 
       require_once 'login.php';
