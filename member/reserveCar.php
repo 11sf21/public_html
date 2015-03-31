@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html>
   <head>
     <title>Reserve Car</title>
@@ -55,7 +54,7 @@
           $vin = $_POST['vin'];
           $location_address = $_POST['location_address'];
           echo '  <input type="hidden" name="vin" value="'.$vin.'">'
-          echo '  <input type="hidden" name="location_address" value="'.$location_address.'">'
+          //echo '  <input type="hidden" name="location_address" value="'.$location_address.'">'
         ?>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
