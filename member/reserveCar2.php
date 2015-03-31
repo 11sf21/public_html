@@ -36,22 +36,16 @@
       $time = $_POST['time'];
       $hours = $_POST['hours'];
       $vin = $_POST['vin'];
-      $location_address = $_POST['location_address'];
-      echo $member_number;
-      echo $date;
-      echo $time;
-      echo $hours;
-      echo $vin;
-      echo $location_address;
 
       require_once 'login.php';
       $conn = new mysqli($hn, $un, $pw, $db);
       if ($conn->connect_error) die($conn->connect_error);
+
+      $query = "INSERT INTO reservations (reservation_number, member_number, vin, reserve_date, pick_up_time, " .
+      "hours_used, return_date, return_time) " .
+      "VALUES (NULL, '$member_number', '$vin', '$date', '$time', '$hours', NULL, NULL)";
   
-      $result = mysqli_query($conn, "INSERT INTO reservations (reservation_number, member_number, vin, reserve_date, pick_up_time, " .
-      "location_address, hours_used, return_date, return_time) " .
-      "VALUES (NULL, '$member_number', '$vin', '$date', '$time', '$location_address', " .
-      "'$hours', NULL, NULL)";)
+      $result = mysqli_query($conn, $query)
       or die ("Couldn't execute insertion.");
       $result = mysqli_query($conn, "SELECT * FROM reservations WHERE vin = '$vin' and pick_up_time = '$time'")
       or die ("Couldn't execute query.");

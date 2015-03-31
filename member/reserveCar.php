@@ -50,12 +50,6 @@
             <input type="text" class="form-control" name="hours" placeholder="Enter amount of hours" />
           </div>
         </div>
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="location_address">Location:</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" name="location_address" placeholder="Enter lot # eg Lot 1" />
-          </div>
-        </div>
         <?php
           $vin = $_POST['vin'];
           echo '  <input type="hidden" name="vin" value="'.$vin.'">' 
