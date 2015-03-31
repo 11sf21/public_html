@@ -4,8 +4,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Leave a comment!</title>
   </head>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../main.css">
+  </head>
+  
   <body>
-
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="../index.html">KTCS Home</a></li>
+        </ul>
+        <ul class="pull-right">
+          <li><a href="../memberEntry.html">Display Car Rental History</a></li>
+          <li><a href="../member/memberLinks.html">Add Car to Location</a></li>
+          // <li><a href="administratorLinks.html">Administrator</a></li>
+        </ul>
+      </div>
+    </div>
     <?php
       require_once 'login.php';
   
@@ -24,5 +39,6 @@
 	
       mysqli_close($dbc);
     ?>
+    <h2>Thanks for leaving a comment!</h2>
   </body>
 </html>
