@@ -1,6 +1,6 @@
 <html>
 	<table style="border-collapse:collapse;">
-	   <tr>
+	   <tr style = "border-top:1px solid black;">
 	   <th style="padding:5px;border-top:1px solid black;">VIN</th>
 		 <th style="padding:5px;border-left:1px solid black;">Make</th>
 		 <th style="padding:5px;border-left:1px solid black;">Model</th>
