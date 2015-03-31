@@ -43,16 +43,6 @@
       $location_address = $_POST['location_address'];
       $current_status = 'Available';
       $last_gas_tank_reading = 'full tank';
-      echo $vin;
-      echo $make;
-      echo $model;
-      echo $year;
-      echo $current_status;
-      echo $last_odom;
-      echo $last_gas_tank_reading;
-      echo $last_maint_date;
-      echo $last_maint_odom;
-      echo $location_address;
       
 
       require_once 'login.php';
