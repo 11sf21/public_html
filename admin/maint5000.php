@@ -19,7 +19,7 @@
     </div>
 
 	<table style="border-collapse:collapse;border:1px solid black;">
-	   <th style="padding:5px;border-top:1px solid black;">VIN</th>
+	   <th style="padding:5px;">VIN</th>
 		 <th style="padding:5px;border-left:1px solid black;">Make</th>
 		 <th style="padding:5px;border-left:1px solid black;">Model</th>
 		 <th style="padding:5px;border-left:1px solid black;">Year</th>
@@ -38,7 +38,7 @@
 	  	while($row = mysqli_fetch_assoc($result))
     	{
       		extract($row);
-      		echo '<tr style="border-top:1px solid black;"><td style="padding:5px;border-top:1px solid black;">'.$vin.'</td>';
+      		echo '<tr style="border-top:1px solid black;"><td style="padding:5px;>'.$vin.'</td>';
 			echo '<td style="padding:5px;border-left:1px solid black;">'.$make.'</td>';
 			echo '<td style="padding:5px;border-left:1px solid black;">'.$model.'</td>';
 			echo '<td style="padding:5px;border-left:1px solid black;">'.$year.'</td>';
