@@ -19,13 +19,6 @@
         </ul>
       </div>
     </div>
-    <div class="nav">
-      <div class="container">
-        <ul class="pull-right">
-          <li><a href="reserveCar.html">Reserve Car</a></li>
-        </ul>
-      </div>
-    </div>
 
     <table style="border-collapse:collapse;border:1px solid black;">
     <th style="padding:5px;border-top:1px solid black;">VIN</th>

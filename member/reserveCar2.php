@@ -51,7 +51,7 @@
       $result = mysqli_query($conn, "INSERT INTO reservations (reservation_number, member_number, vin, reserve_date, pick_up_time, " .
       "location_address, hours_used, return_date, return_time) " .
       "VALUES (NULL, '$member_number', '$vin', '$date', '$time', '$location_address', " .
-      "'$hours', NULL, NULL)")
+      "'$hours', NULL, NULL)";)
       or die ("Couldn't execute insertion.");
       $result = mysqli_query($conn, "SELECT * FROM reservations WHERE vin = '$vin' and pick_up_time = '$time'")
       or die ("Couldn't execute query.");
