@@ -20,7 +20,7 @@
     <h2>K-Town Car Share Registration</h2>
 
     <?php
-      require_once 'login.php';
+      /*require_once 'login.php';
   
       $name = $_POST['name'];
       $address = $_POST['address'];
@@ -51,7 +51,7 @@
         echo "Your member number is $member_number<br />";
       }
 
-      mysqli_close($dbc);
+      mysqli_close($dbc);*/
     ?>
   </body>
 </html>
