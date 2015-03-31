@@ -17,7 +17,11 @@
         </ul>
       </div>
     </div>
-  <?php
+
+    <table style="border-collapse:collapse;border:1px solid black;">
+    <th style="padding:5px;border-top:1px solid black;">Address</th>
+
+    <?php
     require_once 'login.php';
       $conn = new mysqli($hn, $un, $pw, $db);
 	    if ($conn->connect_error) die($conn->connect_error);
@@ -29,8 +33,12 @@
       {
         extract($row);
         //echo "$location_address<br>";
-	      $lot = "$location_address.php";
-        echo '<h2><a href="' . $lot. '">' . $location_address . '</a></h2><br>';
+	      //$lot = "$location_address.php";
+        //echo '<h2><a href="' . $lot. '">' . $location_address . '</a></h2><br>';
+        echo '<tr style="border-top:1px solid black;"><td style="padding:5px;">'.$location_address.'</td>';
+        echo '<form method="post" action="lotCars.php">';
+        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$location_address.'" name="address">View Cars</button></td>';
+        echo '</form>';
 
       }
   
