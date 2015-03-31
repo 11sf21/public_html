@@ -18,9 +18,10 @@
       </div>
     </div>
 
-	<table style="border-collapse:collapse;border:1px solid black;">
-	   <th style="padding:5px;border-top:1px solid black;">VIN</th>
-		 <th style="padding:5px;border-left:1px solid black;">NUMBER_RENTALS</th>
+    <h2>Most Rentals:</h2>
+	  <table style="border-collapse:collapse;border:1px solid black;">
+	  <th style="padding:5px;border-top:1px solid black;">VIN</th>
+	  <th style="padding:5px;border-left:1px solid black;">NUMBER_RENTALS</th>
 
   	<?php
     	require_once 'login.php';
@@ -38,6 +39,33 @@
 
       //echo "$vin,  $make,  $model,  $year,  $current_status,  $last_odometer_reading,  $last_maint_odometer,  $location_address<br />";
     	}
+  
+    $result->close();
+    $conn->close();
+  ?>
+  </table>
+
+  <h2>Least Rentals:</h2>
+  <table style="border-collapse:collapse;border:1px solid black;">
+  <th style="padding:5px;border-top:1px solid black;">VIN</th>
+  <th style="padding:5px;border-left:1px solid black;">NUMBER_RENTALS</th>
+
+  <?php
+      require_once 'login.php';
+      $conn = new mysqli($hn, $un, $pw, $db);
+      if ($conn->connect_error) die($conn->connect_error);
+  
+      $result = mysqli_query($conn, "SELECT vin, count(vin) as NUMBER_RENTALS FROM reservations GROUP BY vin ORDER BY NUMBER_RENTALS ASC LIMIT 1")
+        or die ("Couldn't execute query.");
+           
+      while($row = mysqli_fetch_assoc($result))
+      {
+          extract($row);
+          echo '<tr style="border-top:1px solid black;"><td style="padding:5px;border-top:1px solid black;">'.$vin.'</td>';
+      echo '<td style="padding:5px;border-left:1px solid black;">'.$NUMBER_RENTALS.'</td>';
+
+      //echo "$vin,  $make,  $model,  $year,  $current_status,  $last_odometer_reading,  $last_maint_odometer,  $location_address<br />";
+      }
   
     $result->close();
     $conn->close();
