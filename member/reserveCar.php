@@ -33,25 +33,25 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-2" for="date">Date returned:</label>
+          <label class="control-label col-sm-2" for="date">Date for pick up:</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" name="date" placeholder="Enter pick up date in YYYY-MM-DD format" />
           </div>
         </div>
          <div class="form-group">
-          <label class="control-label col-sm-2" for="time">Time Returned:</label>
+          <label class="control-label col-sm-2" for="time">Time for pick up:</label>
           <div class="col-sm-10">
           	<input type="text" class="form-control" name="time" placeholder="Enter pick up time in hh:mm:ss (24 hr format)" />
           </div>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-2" for="hours">Time Returned:</label>
+          <label class="control-label col-sm-2" for="hours">Hours of use:</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" name="hours" placeholder="Enter amount of hours" />
           </div>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-2" for="location_address">Time Returned:</label>
+          <label class="control-label col-sm-2" for="location_address">Location:</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" name="location_address" placeholder="Enter lot # eg Lot 1" />
           </div>
