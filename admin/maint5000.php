@@ -1,6 +1,7 @@
 <html>
 	<table style="border-collapse:collapse;">
 	   <tr>
+	   <td style="padding:5px;border-top:1px solid black;"><td>
 	   <th style="padding:5px;">VIN</th>
 		 <th style="padding:5px;border-left:1px solid black;">Make</th>
 		 <th style="padding:5px;border-left:1px solid black;">Model</th>
