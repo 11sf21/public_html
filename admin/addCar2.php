@@ -65,8 +65,8 @@
       "VALUES ('$vin', '$make', '$model', '$year', '$current_status', '$last_odom', '$last_gas_tank_reading', '$last_maint_date', '$last_maint_odom', '$location_address')";
       echo $query;
 
-      //$result = mysqli_query($conn, $query)
-      //or die ("Couldn't execute insertion.");
+      $result = mysqli_query($conn, $query)
+      or die ("Couldn't execute insertion.");
 
       $result = mysqli_query($conn, "SELECT * FROM car WHERE location_address = '$location_address'")
       or die ("Couldn't execute query.");
