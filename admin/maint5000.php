@@ -19,14 +19,14 @@
     </div>
 
 	<table style="border-collapse:collapse;border:1px solid black;">
-	   <th style="padding:5px;border-top:1px solid black;">VIN</th>
-		 <th style="padding:5px;border-left:1px solid black;">Make</th>
-		 <th style="padding:5px;border-left:1px solid black;">Model</th>
-		 <th style="padding:5px;border-left:1px solid black;">Year</th>
-		 <th style="padding:5px;border-left:1px solid black;">Current status</th>
-		 <th style="padding:5px;border-left:1px solid black;">Last Odometer</th>
-		 <th style="padding:5px;border-left:1px solid black;">Last Maint Odometer</th>
-		 <th style="padding:5px;border-left:1px solid black;">Location Address</th>
+	   <th>VIN</th>
+		 <th>Make</th>
+		 <th>Model</th>
+		 <th>Year</th>
+		 <th>Current status</th>
+		 <th>Last Odometer</th>
+		 <th>Last Maint Odometer</th>
+		 <th >Location Address</th>
   	<?php
     	require_once 'login.php';
 	  	$conn = new mysqli($hn, $un, $pw, $db);
