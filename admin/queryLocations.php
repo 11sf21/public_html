@@ -40,6 +40,9 @@
         echo '<form method="post" action="lotCars.php">';
         echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$location_address.'" name="address">View Cars</button></td>';
         echo '</form>';
+        echo '<form method="post" action="addCar.php">';
+        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$location_address.'" name="address">Add Car</button></td></tr>';
+        echo '</form>';
 
       }
   
