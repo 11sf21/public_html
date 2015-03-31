@@ -41,6 +41,8 @@
       $last_maint_date = $_POST['last_maint_date'];
       $last_maint_odom = $_POST['last_maint_odom'];
       $location_address = $_POST['location_address'];
+
+      current_status
       echo $vin;
       echo $make;
       echo $model;
@@ -56,12 +58,13 @@
       if ($conn->connect_error) die($conn->connect_error);
 
   
-      $query = "INSERT INTO car (vin, make, model, year, current_status, last_odometer_reading, last_gas_tank_reading, " .
-      "last_maint_date, last_maint_odometer, location_address) " .
-      "VALUES ('$vin', '$make', '$model', '$year', NULL, '$last_odom', NULL, '$last_maint_date', '$last_maint_odom', '$location_address')";
+      //$query = "INSERT INTO car (vin, make, model, year, current_status, last_odometer_reading, last_gas_tank_reading, " .
+      //"last_maint_date, last_maint_odometer, location_address) " .
+      //"VALUES ('$vin', '$make', '$model', '$year', NULL, '$last_odom', NULL, '$last_maint_date', '$last_maint_odom', '$location_address')";
 
-      $result = mysqli_query($conn, $query)
-      or die ("Couldn't execute insertion.");
+      //$result = mysqli_query($conn, $query)
+      //or die ("Couldn't execute insertion.");
+
       $result = mysqli_query($conn, "SELECT * FROM car WHERE location_address = '$location_address'")
       or die ("Couldn't execute query.");
            
