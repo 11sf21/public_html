@@ -36,7 +36,7 @@
     <th style="padding:5px;border-left:1px solid black;">Last Odometer</th>
     <th style="padding:5px;border-left:1px solid black;">Last Maint Odometer</th>
     <th style="padding:5px;border-left:1px solid black;">Location Address</th>
-
+    <th style="padding:5px;border-left:1px solid black;"></th>
     <?php
       $loc_address = $_POST["address"];
       require_once 'login.php';
@@ -61,6 +61,7 @@
         echo '<td style="padding:5px;border-left:1px solid black;">'.$last_maint_odometer.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$location_address.'</td>';
         echo '<form method="post" action="reserveCar.php">';
+        echo '  <input type="hidden" name="location_address" value="'.$location_address.'">';
         echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$vin.'" name="vin">Reserve Car</button></td>';
         echo '</form>';
 
