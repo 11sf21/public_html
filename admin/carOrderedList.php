@@ -34,7 +34,7 @@
     	{
       		extract($row);
       		echo '<tr style="border-top:1px solid black;"><td style="padding:5px;border-top:1px solid black;">'.$vin.'</td>';
-			echo '<td style="padding:5px;border-left:1px solid black;">'.$number_rentals.'</td>';
+			echo '<td style="padding:5px;border-left:1px solid black;">'.$NUMBER_RENTALS.'</td>';
 
       //echo "$vin,  $make,  $model,  $year,  $current_status,  $last_odometer_reading,  $last_maint_odometer,  $location_address<br />";
     	}
