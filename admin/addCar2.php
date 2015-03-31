@@ -64,11 +64,6 @@
       while($row = mysqli_fetch_assoc($result))
       {
         extract($row);
-        $result = mysqli_query($conn, "UPDATE car SET current_status = 'Available' WHERE vin = '$vin'")
-      	or die ("Couldn't execute query.");
-        //$test = "$location_address.php"; 
-        //echo '<a href="' . $test. '">' . $location_address . '</a><br>'; 
-        //echo "$vin,  $make,  $model,  $year,  $current_status,  $last_odometer_reading,  $last_maint_odometer,  $location_address<br />";
         echo '<tr style="border-top:1px solid black;"><td style="padding:5px;border-top:1px solid black;">'.$vin.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$make.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$model.'</td>';
