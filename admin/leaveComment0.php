@@ -42,7 +42,7 @@
         echo '<td style="padding:5px;border-left:1px solid black;">'.$topic.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$comment.'</td>';
         echo '<form method="post" action="leaveComment1.php">';
-        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$comment_number.'" name="vin">Reply</button></td></tr>';
+        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$comment_number.'" name="comment_number">Reply</button></td></tr>';
         echo '</form>';        
       }
   

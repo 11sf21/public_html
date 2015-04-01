@@ -25,11 +25,9 @@
     <th style="padding:5px;border-left:1px solid black;">Member number</th>
     <th style="padding:5px;border-left:1px solid black;">Topic</th>
     <th style="padding:5px;border-left:1px solid black;">Comment</th>
-    <th style="padding:5px;border-left:1px solid black;"></th>
 
     <?php
       $comment_number = $_POST['comment_number'];
-      echo $comment_number;
       $reply = $_POST['reply'];
       
       require_once 'login.php';
@@ -41,12 +39,10 @@
       while($row = mysqli_fetch_assoc($result))
       {
         extract($row);
-        echo $comment_number;
         $old_comment = $comment;
-        echo $old_comment;
       }
       $new_comment = $reply . ' ' . $old_comment;
-      echo $new_comment;
+      
       $result = mysqli_query($conn, "UPDATE comments SET comment = '$new_comment' WHERE comment_number = '$comment_number'")
       or die ("Couldn't execute query.");
            
