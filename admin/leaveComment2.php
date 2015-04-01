@@ -41,7 +41,7 @@
       {
         extract($row);
         $old_comment = $comment;
-        echo $old_comment:
+        echo $old_comment;
       }
       $new_comment = $reply . ' ' . $old_comment;
       echo $new_comment;
