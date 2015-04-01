@@ -43,6 +43,7 @@
         $old_comment = $comment;
       }
       $new_comment = $reply . ' ' . $old_comment;
+      echo $new_comment;
       $result = mysqli_query($conn, "UPDATE comments SET comment = '$new_comment' where comment_number = '$comment_number'")
       or die ("Couldn't execute query.");
            
