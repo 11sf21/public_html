@@ -41,10 +41,11 @@
       {
         extract($row);
         $old_comment = $comment;
+        echo $old_comment:
       }
       $new_comment = $reply . ' ' . $old_comment;
       echo $new_comment;
-      $result = mysqli_query($conn, "UPDATE comments SET comment = '$new_comment' where comment_number = '$comment_number'")
+      $result = mysqli_query($conn, "UPDATE comments SET comment = '$old_comment'.'$reply' WHERE comment_number = '$comment_number'")
       or die ("Couldn't execute query.");
            
       $result = mysqli_query($conn, "SELECT * FROM comments")
