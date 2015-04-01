@@ -25,7 +25,7 @@
     <th style="padding:5px;border-left:1px solid black;">Make</th>
     <th style="padding:5px;border-left:1px solid black;">Model</th>
     <th style="padding:5px;border-left:1px solid black;">Year</th>
-    <th style="padding:5px;border-top:1px solid black;">Reservation number</th>
+    <th style="padding:5px;border-left:1px solid black;">Reservation number</th>
     <th style="padding:5px;border-left:1px solid black;">Pick up time</th>
     <th style="padding:5px;border-left:1px solid black;">Hours used</th>
     
