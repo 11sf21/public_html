@@ -13,8 +13,8 @@
           <li><a href="../index.html">KTCS Home</a></li>
         </ul>
         <ul class="pull-right">
-          <li><a href="../memberEntry.html">Display Car Rental History</a></li>
-          <li><a href="../member/memberLinks.html">Add Car to Location</a></li>
+          <li><a href="../memberEntry.html">Register</a></li>
+          <li><a href="../member/memberLinks.html">Member</a></li>
           <li><a href="administratorLinks.html">Administrator</a></li>
         </ul>
       </div>
