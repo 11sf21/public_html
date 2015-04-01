@@ -35,7 +35,7 @@
        
         <?php
           $comment_number = $_POST['comment_number'];
-          echo '<input type="hidden" name="location_address" value="'.$comment_number.'">'; 
+          echo '<input type="hidden" name="comment_number" value="'.$comment_number.'">'; 
         ?>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
