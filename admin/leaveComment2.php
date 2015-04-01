@@ -15,11 +15,11 @@
         <ul class="pull-right">
           <li><a href="../memberEntry.html">Register</a></li>
           <li><a href="../member/memberLinks.html">Member</a></li>
-          <li><a href="administratorLinks.html">Administrator</a></li>
+          <li><a href="./administratorLinks.html">Administrator</a></li>
         </ul>
       </div>
     </div>
-    
+
     <table style="border-collapse:collapse;border:1px solid black;">
     <th style="padding:5px;border-top:1px solid black;">Comment number</th>
     <th style="padding:5px;border-left:1px solid black;">Member number</th>
@@ -28,11 +28,25 @@
     <th style="padding:5px;border-left:1px solid black;"></th>
 
     <?php
+      $comment_number = $_POST['comment_number'];
+      $reply = $_POST['reply'];
+      
       require_once 'login.php';
-	    $conn = new mysqli($hn, $un, $pw, $db);
-	    if ($conn->connect_error) die($conn->connect_error);
-	
-	    $result = mysqli_query($conn, "SELECT * FROM comments")
+      $conn = new mysqli($hn, $un, $pw, $db);
+      if ($conn->connect_error) die($conn->connect_error);
+
+      $result = mysqli_query($conn, "SELECT * FROM comments WHERE comment_number = '$comment_number'")
+      or die ("Couldn't execute query.");
+      while($row = mysqli_fetch_assoc($result))
+      {
+        extract($row);
+        $old_comment = $comment;
+      }
+      $new_comment = $reply . ' ' . $old_comment;
+      $result = mysqli_query($conn, "UPDATE comments SET comment = '$new_comment' where comment_number = '$comment_number'")
+      or die ("Couldn't execute query.");
+           
+      $result = mysqli_query($conn, "SELECT * FROM comments")
       or die ("Couldn't execute query.");
            
 	    while($row = mysqli_fetch_assoc($result))
@@ -41,15 +55,10 @@
         echo '<tr style="border-top:1px solid black;"><td style="padding:5px;border-top:1px solid black;">'.$comment_number.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$member_number.'</td>';
         echo '<td style="padding:5px;border-left:1px solid black;">'.$topic.'</td>';
-        echo '<td style="padding:5px;border-left:1px solid black;">'.$comment.'</td>';
-        echo '<form method="post" action="leaveComment1.php">';
-        echo '<td style="padding:5px;border-left:1px solid black;"><button type="submit" value="'.$comment_number.'" name="vin">Reply</button></td></tr>';
-        echo '</form>';        
+        echo '<td style="padding:5px;border-left:1px solid black;">'.$comment.'</td></tr>';
       }
   
       $result->close();
       $conn->close();
     ?>
     </table>
-  </body>
-</html>
